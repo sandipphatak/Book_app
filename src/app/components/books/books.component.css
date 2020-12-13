@@ -1,0 +1,6 @@
+.bookList {display: flex;flex-wrap: wrap; align-items: stretch;margin:0;padding:0;justify-content: center }
+.bookList li{ width: 31%;border: 1px solid #dadada; margin: 1%;padding: 10px 2% 0 ; box-sizing: border-box;list-style-type: none;}
+.bookname{display: block;}
+.bookimg{width: 100%;}
+.bInfo{padding: 20px 0;}
+.trashicon{cursor: pointer;}

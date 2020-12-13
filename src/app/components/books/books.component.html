@@ -1,0 +1,25 @@
+<div class="container">
+    <div *ngIf="alert" class="alert alert-danger alert-dismissible fade show" role="alert" >
+        <strong>Book Deleted</strong> successfully!
+        <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>    
+
+    <ul class="bookList">
+        <li *ngFor="let item of apiData">
+            <div class="bAction clearfix">
+                <span class="float-left">Add to favourite</span>
+                <i class="fa fa-trash-o float-right trashicon" style="font-size:24px" (click)="deleteBook(item.id)" ></i>  
+            </div>   
+            <div class="bookname" style="padding:20px 0">{{item.name}}</div>
+            <img src="{{item.bookimg}}" [src-fallback]="workingPlaceholder"
+            ng-init="onLoad($event)"  class="bookimg" />
+            <div class="bInfo clearfix">
+                <span class="bAuthor float-left"> {{item.author}}  </span>
+                <span class="bPrice float-right"> &#8377; {{item.price}} </span>
+            </div>
+        </li>
+    </ul>
+ 
